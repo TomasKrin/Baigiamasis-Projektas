@@ -1,0 +1,273 @@
+body {
+  background: linear-gradient(90deg, #B1414C 0%, #18344C 50%);
+  display: grid;
+  position: relative;
+  grid-template-columns: 3fr 20fr;
+  grid-template-areas: "topBar topBar" "sideBar main" "footer footer";
+}
+body .topBar {
+  grid-area: topBar;
+  margin: 10px;
+  position: relative;
+  z-index: 100;
+}
+body .topBar ul {
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+body .topBar ul .logBtn {
+  white-space: nowrap;
+}
+body .topBar ul #head {
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  body .topBar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+body .topBar ul .logInContainer {
+  display: flex;
+  gap: 20px;
+  margin-right: 20px;
+  height: 30px;
+  align-items: baseline;
+}
+body .topBar ul .logInContainer .logOut:hover {
+  box-shadow: 1px 1px 10px white;
+}
+@media (max-width: 434px) {
+  body .topBar ul .logInContainer {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+body #burger {
+  border: 1px solid rgba(255, 255, 255, 0.034);
+  width: 50px;
+  height: 20px;
+  display: none;
+  gap: 5px;
+  flex-direction: column;
+  padding: 5px;
+  box-shadow: 0px 0px 20px rgb(0, 0, 0);
+  position: absolute;
+  top: 8vh;
+  z-index: 1000;
+}
+@media (max-width: 768px) {
+  body #burger {
+    display: flex;
+  }
+}
+body #burger div {
+  height: 5px;
+  background-color: white;
+  border-radius: 5px;
+}
+body #burger .barOne {
+  width: 30px;
+}
+body #burger .barTwo {
+  width: 20px;
+}
+body #burger .barThree {
+  width: 10px;
+}
+body .sideBar {
+  grid-area: sideBar;
+  border-right: 1px solid white;
+  border-top: 1px solid white;
+  padding: 10px;
+  display: block;
+  position: relative;
+  top: 0;
+  transform: translateX(0%);
+  box-shadow: -0.5px -0.5px 10px rgba(255, 255, 255, 0.886);
+}
+body .sideBar ul {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+body .sideBar ul .agentSelect {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid rgba(255, 254, 254, 0.162);
+  padding: 5px;
+  box-shadow: -0.5px -0.5px 1px rgba(255, 255, 255, 0.139);
+}
+body .sideBar ul .agentSelect:hover {
+  box-shadow: 1px 1px 5px rgb(255, 255, 255);
+}
+body .sideBar ul .agentSelect img {
+  width: 30px;
+  height: 30px;
+}
+@media (min-width: 769px) and (max-width: 2000px) {
+  body .sideBar {
+    transform: translateX(0%);
+    display: block;
+    position: relative;
+    top: 0;
+  }
+}
+@media (max-width: 768px) {
+  body .sideBar {
+    transform: translateX(-150%);
+    position: absolute;
+    top: 6vh;
+    z-index: 10;
+    background-color: #B1414C;
+  }
+}
+body main {
+  position: relative;
+  max-width: 90vw;
+  grid-area: main;
+}
+body main .imageCont {
+  width: auto;
+  height: auto;
+  left: 20vw;
+  top: 6vh;
+  position: relative;
+}
+body main .imageCont .agentPicture {
+  max-width: 70vw;
+  height: 100vh;
+  position: fixed;
+  left: 55vw;
+  top: -2vh;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  body main .imageCont .agentPicture {
+    width: 70vw;
+    height: 70vh;
+    top: -5vh;
+    left: 45vw;
+    position: fixed;
+    -o-object-fit: contain;
+       object-fit: contain;
+    z-index: -1;
+  }
+}
+body main .imageCont img {
+  position: fixed;
+  left: 50vw;
+  top: 15vh;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  body main .imageCont img {
+    position: fixed;
+    left: 0;
+    z-index: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1330px) {
+  body main .imageCont img {
+    position: fixed;
+    left: 40vw;
+    z-index: 0;
+  }
+}
+body main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+body main section h1 {
+  font-size: 50px;
+  margin: 0;
+  z-index: 1;
+}
+body main section #intro {
+  z-index: 1;
+  margin: 0;
+  padding: 1.5vw;
+}
+@media (max-width: 768px) {
+  body main section #intro {
+    padding: 0;
+  }
+}
+body main section .abilityVid {
+  width: 50vw;
+}
+@media (max-width: 768px) {
+  body main section .abilityVid {
+    width: 80vw;
+  }
+}
+body main section #userProfile {
+  width: 78vw;
+}
+@media (max-width: 768px) {
+  body main section #userProfile .heading {
+    width: 200px;
+  }
+}
+body main section #userProfile .videos {
+  display: flex;
+  gap: 50px;
+  margin-top: 3vh;
+}
+@media (max-width: 768px) {
+  body main section #userProfile .videos {
+    flex-direction: column;
+  }
+}
+body main section #userProfile .firstGuide {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+@media (max-width: 768px) {
+  body main section #userProfile .firstGuide {
+    width: 70vw;
+  }
+}
+body main section #userProfile .secondGuide {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+@media (max-width: 768px) {
+  body main section #userProfile .secondGuide {
+    width: 70vw;
+  }
+}
+body main section #userProfile .mapsDiv {
+  display: flex;
+  width: 63vw;
+  overflow-x: scroll;
+  z-index: 10;
+}
+@media (max-width: 768px) {
+  body main section #userProfile .mapsDiv {
+    width: 65vw;
+  }
+}
+body main section #userProfile .mapsDiv .map {
+  width: 20vw;
+}
+@media (max-width: 767px) {
+  body main section #userProfile .mapsDiv .map {
+    width: 65vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  body main section #userProfile .mapsDiv .map {
+    width: 32vw;
+  }
+}/*# sourceMappingURL=mainpage.css.map */

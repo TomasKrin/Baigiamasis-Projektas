@@ -1,0 +1,99 @@
+body {
+    background: linear-gradient(90deg, #B1414C 0%, #18344C 50%);
+    display: grid;
+    position: relative;
+    grid-template-columns: 3fr 20fr;
+    grid-template-areas:
+        "topBar topBar"
+        "main main"
+        "footer footer";
+
+    .topBar {
+        grid-area: topBar;
+        margin: 10px;
+        position: relative;
+        z-index: 100;
+
+        ul {
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+
+            #head {
+                white-space: nowrap;
+            }
+
+            .logInContainer {
+                display: flex;
+                gap: 20px;
+                margin-right: 20px;
+
+                .logBtn {
+                    white-space: nowrap;
+                }
+
+                @media (max-width:330px) {
+                    flex-direction: column;
+                    gap: 0;
+                }
+            }
+        }
+    }
+
+    main {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10vh;
+            gap: 10px;
+
+            .formCont {
+                display: flex;
+                width: 300px;
+                justify-content: space-between;
+
+                #confirmPword {
+                    height: 18px;
+                }
+
+                @media (max-width:330px) {
+                    width: 200px;
+                }
+
+                input {
+                    @media (max-width:330px) {
+                        width: 100px;
+                    }
+                }
+
+
+            }
+
+            .btnDiv {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                gap: 20px;
+
+                button {
+                    padding: 5px;
+                    background-color: #18344C;
+                    color: white;
+                    border-color: white;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+            }
+
+
+        }
+    }
+
+
+}

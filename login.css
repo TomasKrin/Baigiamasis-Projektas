@@ -1,0 +1,80 @@
+body {
+  background: linear-gradient(90deg, #B1414C 0%, #18344C 50%);
+  display: grid;
+  position: relative;
+  grid-template-columns: 3fr 20fr;
+  grid-template-areas: "topBar topBar" "main main" "footer footer";
+}
+body .topBar {
+  grid-area: topBar;
+  margin: 10px;
+  position: relative;
+  z-index: 100;
+}
+body .topBar ul {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+body .topBar ul #head {
+  white-space: nowrap;
+}
+body .topBar ul .logInContainer {
+  display: flex;
+  gap: 20px;
+  margin-right: 20px;
+}
+body .topBar ul .logInContainer .logBtn {
+  white-space: nowrap;
+}
+@media (max-width: 330px) {
+  body .topBar ul .logInContainer {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+body main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  gap: 10px;
+}
+body main form .formCont {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+}
+body main form .formCont #confirmPword {
+  height: 18px;
+}
+@media (max-width: 330px) {
+  body main form .formCont {
+    width: 200px;
+  }
+}
+@media (max-width: 330px) {
+  body main form .formCont input {
+    width: 100px;
+  }
+}
+body main form .btnDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 20px;
+}
+body main form .btnDiv button {
+  padding: 5px;
+  background-color: #18344C;
+  color: white;
+  border-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}/*# sourceMappingURL=login.css.map */
